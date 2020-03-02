@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "177316669279",
+    "firebase_url": "https://codizious-shopping.firebaseio.com",
+    "project_id": "codizious-shopping",
+    "storage_bucket": "codizious-shopping.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177316669279:android:d056e8ca67912c65aef8ea",
+        "android_client_info": {
+          "package_name": "com.codizious_shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177316669279-8p0gl46stcekb30glmj0ue4hqjf0a34n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDahSkp6RBYnmXFjVNuid3A9K0anjdroGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177316669279-8p0gl46stcekb30glmj0ue4hqjf0a34n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
