@@ -24,6 +24,7 @@ public class CompleteOrderActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_complete_order);
 
 		Button btn1 = (Button)findViewById(R.id.button);
+		assert btn1 != null;
 		btn1.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -36,6 +37,7 @@ public class CompleteOrderActivity extends ActionBarActivity {
 		});
 
 		Button btn2 = (Button)findViewById(R.id.button2);
+		assert btn2 != null;
 		btn2.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -48,6 +50,7 @@ public class CompleteOrderActivity extends ActionBarActivity {
 		});
 
 		Button btn3 = (Button)findViewById(R.id.button3);
+		assert btn3 != null;
 		btn3.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

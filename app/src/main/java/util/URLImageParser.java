@@ -82,8 +82,7 @@ public class URLImageParser implements ImageGetter {
             try {
                 InputStream is = fetch(urlString);
                 Drawable drawable = Drawable.createFromStream(is, "src");
-                drawable.setBounds(0, 0, 0 + drawable.getIntrinsicWidth(), 0 
-                        + drawable.getIntrinsicHeight()); 
+                drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
                 return drawable;
             } catch (Exception e) {
                 return null;

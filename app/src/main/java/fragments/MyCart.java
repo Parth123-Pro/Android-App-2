@@ -63,7 +63,7 @@ public class MyCart {
 	}
 	public void put_items_to_session(ArrayList<HashMap<String, String>> products){
 		 	try {
-				settings.edit().putString("cart_items",ObjectSerializer.serialize(products)).commit();
+				settings.edit().putString("cart_items",ObjectSerializer.serialize(products)).apply();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

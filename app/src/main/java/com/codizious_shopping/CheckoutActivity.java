@@ -101,13 +101,13 @@ public class CheckoutActivity extends ActionBarActivity {
 					else{
 						
 					
-						settings.edit().putString("order_name", txtName.getText().toString()).commit();
-						settings.edit().putString("order_city", txtCity.getText().toString()).commit();
-						settings.edit().putString("order_email", txtEmail.getText().toString()).commit();
-						settings.edit().putString("order_zipcode", txtZipcode.getText().toString()).commit();
-						settings.edit().putString("order_address", txtAddress.getText().toString()).commit();
+						settings.edit().putString("order_name", txtName.getText().toString()).apply();
+						settings.edit().putString("order_city", txtCity.getText().toString()).apply();
+						settings.edit().putString("order_email", txtEmail.getText().toString()).apply();
+						settings.edit().putString("order_zipcode", txtZipcode.getText().toString()).apply();
+						settings.edit().putString("order_address", txtAddress.getText().toString()).apply();
 						
-						settings.edit().putString("order_phone", txtPhone.getText().toString()).commit();
+						settings.edit().putString("order_phone", txtPhone.getText().toString()).apply();
 						
 
 						}
@@ -139,22 +139,22 @@ public class CheckoutActivity extends ActionBarActivity {
 				if(jObj.getString("responce").equalsIgnoreCase("success")){
 					JSONObject data = jObj.getJSONObject("data");
 					if(!data.getString("id").equalsIgnoreCase("")){
-						settings.edit().putString("userid", data.getString("id")).commit();
-						settings.edit().putString("username", data.getString("username")).commit();
-						settings.edit().putString("user_unique_code", data.getString("unique_code")).commit();
-						settings.edit().putString("user_email", data.getString("email")).commit();
-						settings.edit().putString("user_name", data.getString("name")).commit();
-						settings.edit().putString("user_mobile", data.getString("mobile")).commit();
-						settings.edit().putString("user_address", data.getString("address")).commit();
-						settings.edit().putString("user_state", data.getString("state")).commit();
-						settings.edit().putString("user_country", data.getString("country")).commit();
-						settings.edit().putString("user_zipcode", data.getString("zipcode")).commit();
-						settings.edit().putString("user_city", data.getString("city")).commit();
-						settings.edit().putString("user_password", data.getString("password")).commit();
-						settings.edit().putString("user_image", data.getString("image")).commit();
-						settings.edit().putString("user_phone_verified", data.getString("phone_verified")).commit();
-						settings.edit().putString("user_reg_date", data.getString("reg_date")).commit();
-						settings.edit().putString("user_status", data.getString("status")).commit();
+						settings.edit().putString("userid", data.getString("id")).apply();
+						settings.edit().putString("username", data.getString("username")).apply();
+						settings.edit().putString("user_unique_code", data.getString("unique_code")).apply();
+						settings.edit().putString("user_email", data.getString("email")).apply();
+						settings.edit().putString("user_name", data.getString("name")).apply();
+						settings.edit().putString("user_mobile", data.getString("mobile")).apply();
+						settings.edit().putString("user_address", data.getString("address")).apply();
+						settings.edit().putString("user_state", data.getString("state")).apply();
+						settings.edit().putString("user_country", data.getString("country")).apply();
+						settings.edit().putString("user_zipcode", data.getString("zipcode")).apply();
+						settings.edit().putString("user_city", data.getString("city")).apply();
+						settings.edit().putString("user_password", data.getString("password")).apply();
+						settings.edit().putString("user_image", data.getString("image")).apply();
+						settings.edit().putString("user_phone_verified", data.getString("phone_verified")).apply();
+						settings.edit().putString("user_reg_date", data.getString("reg_date")).apply();
+						settings.edit().putString("user_status", data.getString("status")).apply();
 
 
 					}

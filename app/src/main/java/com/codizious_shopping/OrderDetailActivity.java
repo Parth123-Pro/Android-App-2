@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
@@ -18,9 +19,11 @@ import util.ObjectSerializer;
 import Config.ConstValue;
 import adapters.OrderdetailAdapter;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -49,6 +52,7 @@ public class OrderDetailActivity extends ActionBarActivity {
 	String order_id,order_status;
 	int current_postion;
 	//ProgressDialog dialog;
+	@TargetApi(Build.VERSION_CODES.KITKAT)
 	@SuppressWarnings({ "unchecked", "unused" })
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +67,7 @@ public class OrderDetailActivity extends ActionBarActivity {
 		order_status = getIntent().getExtras().getString("status"); 
 		current_postion  = getIntent().getExtras().getInt("position"); 
 		
-		getSupportActionBar().setHomeButtonEnabled(true);
+		Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		orderdetailArray = new ArrayList<HashMap<String,String>>();
@@ -86,6 +90,7 @@ public class OrderDetailActivity extends ActionBarActivity {
 		new loadOrderdetailTask().execute();
 		 
 		Button btnCancle = (Button)findViewById(R.id.buttonCancle);
+		assert btnCancle != null;
 		btnCancle.setOnClickListener(new OnClickListener() {
 			
 			@Override

@@ -182,7 +182,8 @@ _increase.setOnClickListener(new OnClickListener() {
 });
 
 addtocart=(Button)findViewById(R.id.button3);
-addtocart.setOnClickListener(new OnClickListener() {
+		assert addtocart != null;
+		addtocart.setOnClickListener(new OnClickListener() {
 	
 	@Override
 	public void onClick(View v) {

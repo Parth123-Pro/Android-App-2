@@ -122,7 +122,7 @@ public class MyOrderFragment extends Fragment {
   				//adapter.notifyDataSetChanged();
   			}	
   			try {
-  				settings.edit().putString("orderitem",ObjectSerializer.serialize(ListorderArray)).commit();
+  				settings.edit().putString("orderitem",ObjectSerializer.serialize(ListorderArray)).apply();
   			} catch (IOException e) {
   				// TODO Auto-generated catch block
   				e.printStackTrace();

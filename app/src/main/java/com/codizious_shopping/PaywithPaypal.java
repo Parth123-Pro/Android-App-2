@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -42,7 +43,7 @@ import fragments.MyCart;
 import util.Common;
 import util.ConnectionDetector;
 
-public class PaywithPaypal extends ActionBarActivity {
+public class PaywithPaypal extends AppCompatActivity {
     private static final String TAG = "paymentExample";
 
     // note that these credentials will differ between live & sandbox environments.

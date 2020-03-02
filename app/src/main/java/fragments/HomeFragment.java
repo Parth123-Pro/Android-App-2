@@ -125,7 +125,7 @@ public class HomeFragment extends Fragment {
 				//adapter.notifyDataSetChanged();
 			}	
 			try {
-				settings.edit().putString("imagename",ObjectSerializer.serialize(slideryArray)).commit();
+				settings.edit().putString("imagename",ObjectSerializer.serialize(slideryArray)).apply();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -229,7 +229,7 @@ public class HomeFragment extends Fragment {
 				//adapter.notifyDataSetChanged();
 			}	
 			try {
-				settings.edit().putString("categoryname",ObjectSerializer.serialize(categoryArray)).commit();
+				settings.edit().putString("categoryname",ObjectSerializer.serialize(categoryArray)).apply();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -334,7 +334,7 @@ public class HomeFragment extends Fragment {
 				//adapter.notifyDataSetChanged();
 			}
 			try {
-				settings.edit().putString("site_settings",ObjectSerializer.serialize(site_settings)).commit();
+				settings.edit().putString("site_settings",ObjectSerializer.serialize(site_settings)).apply();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
