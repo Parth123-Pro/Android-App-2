@@ -40,7 +40,7 @@ import com.codizious_shopping.R;
 
 @SuppressLint("NewApi")
 public class HomeFragment extends Fragment {
-	//jai
+
 	Activity act;	
 	public SharedPreferences settings;
 	public ConnectionDetector cd;
