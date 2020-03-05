@@ -2,6 +2,7 @@ package com.codizious_shopping;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -43,15 +44,16 @@ public class SignUpActivity extends ActionBarActivity {
 		supportRequestWindowFeature(WindowCompat.FEATURE_ACTION_BAR_OVERLAY);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sign_up);
-		getSupportActionBar().setHomeButtonEnabled(true);
+		Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_bg_a));
-		
+
 		common = new Common();
 		
 		txtPassword = (EditText)findViewById(R.id.editPassword);
 		txtPhone = (EditText)findViewById(R.id.editPhone);
 		btnregister = (Button)findViewById(R.id.button1);
+		assert btnregister != null;
 		btnregister.setOnClickListener(new OnClickListener() {
 			
 			@Override
