@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.vegitable.LoginActivity" >
+    tools:context="com.vegitable.LoginActivity"
+    android:background="@drawable/background">
 
   <ScrollView
         android:id="@+id/scrollView1"
@@ -13,21 +14,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical" >
-            <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="180dp"
-        android:layout_alignParentTop="true" >
-
-                <ImageView
-                    android:id="@+id/imageView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:src="@drawable/servpapa_logo"
-                    android:layout_marginTop="20dp" />
-
-    </RelativeLayout>
 
 <LinearLayout
     android:layout_width="fill_parent"
@@ -35,8 +21,20 @@
     android:padding="@dimen/activity_horizontal_margin"
     android:layout_centerHorizontal="true"
     android:orientation="vertical" >
+        <TextView
+            android:layout_marginTop="50dp"
+            android:paddingTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Sign In"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
+
 
         <LinearLayout
+            android:padding="40dp"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -53,8 +51,9 @@
                 android:lines="1"
                 android:maxLines="1"
                 android:singleLine="true"
-                android:drawablePadding="5dp"
-                 android:drawableLeft="@drawable/ic_register_phone" />
+                android:drawablePadding="15dp"
+                android:background="@drawable/textbg"
+                android:drawableLeft="@drawable/ic_register_phone" />
 
             <EditText
                 android:id="@+id/editPassword"
@@ -66,27 +65,27 @@
                 android:lines="1"
                 android:maxLines="1"
                 android:padding="15dp"
-                android:drawablePadding="5dp"
-                android:drawableLeft="@drawable/ic_login_07" />
+                android:layout_marginTop="10dp"
+                android:drawablePadding="15dp"
+                android:background="@drawable/textbg"
+                android:drawableLeft="@drawable/lock" />
         </LinearLayout>
 
-        <Button
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+           <Button
             android:id="@+id/buttonLogin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/text_btn_login"
             android:textColor="@color/white"
             android:background="@drawable/xml_yellow_button" />
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Or"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin" />
 
         <Button
             android:id="@+id/buttonRegister"
@@ -95,7 +94,8 @@
             android:text="@string/text_btn_register"
             android:textColor="@color/white"
             android:background="@drawable/xml_red_button" />
-    <Button
+
+        <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_forgot_password_need"

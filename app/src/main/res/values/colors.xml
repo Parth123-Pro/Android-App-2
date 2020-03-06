@@ -8,4 +8,5 @@
     <color name="fab_color_2">#9c27b0</color>
     <color name="fab_color_2_muted">#a56ab0</color>
     <color name="navigationbar">#FFA803</color>
+    <color name="background">#404E5A</color>
 </resources>
