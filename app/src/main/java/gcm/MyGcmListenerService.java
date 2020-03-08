@@ -1,8 +1,6 @@
 package gcm;
 
-/**
- * Created by Way on 3/1/2016.
- */
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
